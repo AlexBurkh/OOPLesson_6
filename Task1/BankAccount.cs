@@ -90,7 +90,9 @@ namespace Task1
         }
         public bool Equals(BankAccount another)
         {
-            if (this.GetHashCode() == another.GetHashCode())
+            if (_accountNumber == another._accountNumber &&
+                _accountType == another._accountType &&
+                _balance == another._balance)
             {
                 return true;
             }
