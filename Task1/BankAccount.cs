@@ -8,6 +8,7 @@ namespace Task1
 {
     class BankAccount
     {
+        #region Конструкторы
         public BankAccount() : this(BankAccountType.debit, default(decimal)) { }
         public BankAccount(decimal balance) : this(BankAccountType.debit, balance) { }
         public BankAccount(BankAccountType type) : this(type, default(decimal)) { }
@@ -17,13 +18,14 @@ namespace Task1
             _accountType = type;
             _balance = balance;
         }
-
-
+        #endregion
+        #region Поля
         private static int _lastNumber = 0;
         private decimal _accountNumber;
         private decimal _balance;
         private BankAccountType _accountType;
-
+        #endregion
+        #region Свойства
         internal decimal Number { get { return _accountNumber; } }
         internal decimal Balance { get { return _balance; } private set { _balance = value; } }
         internal BankAccountType Type
@@ -37,13 +39,17 @@ namespace Task1
                 _accountType = value;
             }
         }
-
+        #endregion
+        #region Методы
+        #region static
         private static int GenerateAccountNumber()
         {
             int num = _lastNumber;
             _lastNumber += 1;
             return num;
         }
+        #endregion static
+        #region Базовые
         public void AddToBalance(decimal sum) { Balance += sum; }
         public decimal TakeFromBalance(decimal sum)
         {
@@ -62,5 +68,39 @@ namespace Task1
                 _balance += moneyTaken;
             }
         }
+        #endregion Базовые
+        #region Операторы
+        public static bool operator == (BankAccount a, BankAccount b)
+        {
+            return a.Equals(b);
+        }
+        public static bool operator != (BankAccount a, BankAccount b)
+        {
+            return !a.Equals(b);
+        }
+        #endregion
+        #region Override
+        public override string ToString()
+        {
+            return $"Account number: {_accountNumber}\nAccount type: {_accountType}\nBalance: {_balance}";
+        }
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as BankAccount);
+        }
+        public bool Equals(BankAccount another)
+        {
+            if (this.GetHashCode() == another.GetHashCode())
+            {
+                return true;
+            }
+            return false;
+        }
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(_accountNumber, _accountType, _balance);
+        }
+        #endregion Override
+        #endregion Методы
     }
 }
