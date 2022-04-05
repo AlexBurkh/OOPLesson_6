@@ -30,7 +30,8 @@ namespace Task2
         }
         public override string ToString()
         {
-            return $"Координаты (X,Y): ({_x},{_y})\n" +
+            return $"Имя класса: {this.GetType()}\n" +
+                   $"Координаты точки (X,Y): ({_x},{_y})\n" +
                    $"Цвет: {_color}\n" +
                    $"Видимость: {IsVisible()}\n";
         }

@@ -28,7 +28,8 @@ namespace Task2
         }
         public override string ToString()
         {
-            return $"Координаты центра круга (X,Y): ({_x},{_y})\n" +
+            return $"Имя класса: {this.GetType()}\n" +
+                   $"Координаты центра круга (X,Y): ({_x},{_y})\n" +
                    $"Радиус круга: {_radius}\n" +
                    $"Цвет: {_color}\n" +
                    $"Видимость: {IsVisible()}\n";

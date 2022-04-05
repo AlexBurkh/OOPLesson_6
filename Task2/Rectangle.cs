@@ -30,7 +30,8 @@ namespace Task2
         }
         public override String ToString()
         {
-            return $"Координаты точки верхнего левого угла(X,Y): ({_x},{_y})\n" +
+            return $"Имя класса: {this.GetType()}\n" +
+                   $"Координаты точки верхнего левого угла (X,Y): ({_x},{_y})\n" +
                    $"Высота: {_height}\n" +
                    $"Ширина: {_width}\n" +
                    $"Цвет: {_color}\n" +

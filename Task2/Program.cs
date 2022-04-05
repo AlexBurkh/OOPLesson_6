@@ -25,6 +25,32 @@ namespace Task2
                 new Rectangle(6,6,4,3,Color.green,true),
             };
 
+            Console.WriteLine("Вывод начального состояния (после создания объектов)");
+            for (int i = 0; i < figures.Length; i++)
+            {
+                Console.WriteLine(figures[i]);
+            }
+
+            Console.WriteLine("Изменение координат");
+            for (int i = 0; i < figures.Length; i++)
+            {
+                figures[i].MoveX(2);
+                figures[i].MoveY(3);
+            }
+
+            Console.WriteLine("Вывод итогового состояния (после методов перемещения");
+            for (int i = 0; i < figures.Length; i++)
+            {
+                Console.WriteLine(figures[i]);
+            }
+
+            Console.WriteLine("Изменение цвета");
+            for (int i = 0; i < figures.Length; i++)
+            {
+                figures[i].ChangeColor(Color.magentayellow);
+            }
+
+            Console.WriteLine("Вывод итогового состояния (после методов изменения цвета");
             for (int i = 0; i < figures.Length; i++)
             {
                 Console.WriteLine(figures[i]);
