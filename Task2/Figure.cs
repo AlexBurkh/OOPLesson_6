@@ -9,9 +9,9 @@ namespace Task2
     public abstract class Figure
     {
         protected Color _color;
-        protected bool _visible;
+        protected Boolean _visible;
 
-        public bool IsVisible()
+        public Boolean IsVisible()
         {
             return _visible;
         }
@@ -19,8 +19,7 @@ namespace Task2
         {
             _color = newColor;
         }
-        public abstract void MoveX(int shift);
-        public abstract void MoveY(int shift);
-        public abstract void Print();
+        public abstract void MoveX(Int32 shift);
+        public abstract void MoveY(Int32 shift);
     }
 }

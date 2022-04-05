@@ -18,7 +18,17 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Figure[] figures = new Figure[] 
+            {
+                new Point(5,5),
+                new Circle(5,5,4,Color.blue,false),
+                new Rectangle(6,6,4,3,Color.green,false),
+            };
+
+            for (int i = 0; i < figures.Length; i++)
+            {
+                Console.WriteLine(figures[i]);
+            }
         }
     }
 }

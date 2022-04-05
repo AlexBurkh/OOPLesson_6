@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    internal enum Color
+    public enum Color
     {
         red = 0,
         green = 1,
