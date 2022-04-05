@@ -6,9 +6,21 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    internal abstract class Figure
+    public abstract class Figure
     {
-        protected string _color;
+        protected Color _color;
         protected bool _visible;
+
+        public bool IsVisible()
+        {
+            return _visible;
+        }
+        public void ChangeColor(Color newColor)
+        {
+            _color = newColor;
+        }
+        public abstract void MoveX(int shift);
+        public abstract void MoveY(int shift);
+        public abstract void Print();
     }
 }
