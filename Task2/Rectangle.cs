@@ -9,10 +9,10 @@ namespace Task2
     public class Rectangle : Point
     {
         #region Конструкторы
-        public Rectangle() : this(0, 0, 1, 1, Color.red, true) { }
-        public Rectangle(Int32 x, Int32 y) : this(x, y, 1, 1, Color.red, true) { }
-        public Rectangle(Int32 x, Int32 y, UInt32 height, UInt32 width) : this(x, y, height, width, Color.red, true) { }
-        public Rectangle(Int32 x, Int32 y, UInt32 height, UInt32 width, Color color) : this(x, y, height, width, color, true) { }
+        public Rectangle() : this(0, 0, 1, 1, Color.red, false) { }
+        public Rectangle(Int32 x, Int32 y) : this(x, y, 1, 1, Color.red, false) { }
+        public Rectangle(Int32 x, Int32 y, UInt32 height, UInt32 width) : this(x, y, height, width, Color.red, false) { }
+        public Rectangle(Int32 x, Int32 y, UInt32 height, UInt32 width, Color color) : this(x, y, height, width, color, false) { }
         public Rectangle(Int32 x, Int32 y, UInt32 height, UInt32 width, Color color, bool visible)
             : base(x, y, color, visible)
         {
@@ -34,7 +34,7 @@ namespace Task2
                    $"Высота: {_height}\n" +
                    $"Ширина: {_width}\n" +
                    $"Цвет: {_color}\n" +
-                   $"Видимость: {IsVisible()}";
+                   $"Видимость: {IsVisible()}\n";
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Task2
             _color = color;
             _visible = visible;
         }
-        public Point(Int32 x, Int32 y, Color color) : this(x, y, color, true) { }
+        public Point(Int32 x, Int32 y, Color color) : this(x, y, color, false) { }
         public Point(Int32 x, Int32 y) : this(x, y, Color.red, false) { }
         public Point() : this(0,0, Color.red, false) { }
         #endregion
@@ -32,7 +32,7 @@ namespace Task2
         {
             return $"Координаты (X,Y): ({_x},{_y})\n" +
                    $"Цвет: {_color}\n" +
-                   $"Видимость: {IsVisible()}";
+                   $"Видимость: {IsVisible()}\n";
         }
         public virtual Double CalcSquare()
         {

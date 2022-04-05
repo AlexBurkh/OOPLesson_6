@@ -21,8 +21,8 @@ namespace Task2
             Figure[] figures = new Figure[] 
             {
                 new Point(5,5),
-                new Circle(5,5,4,Color.blue,false),
-                new Rectangle(6,6,4,3,Color.green,false),
+                new Circle(5,5,4,Color.blue,true),
+                new Rectangle(6,6,4,3,Color.green,true),
             };
 
             for (int i = 0; i < figures.Length; i++)

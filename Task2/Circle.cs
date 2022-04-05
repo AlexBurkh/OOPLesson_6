@@ -14,10 +14,10 @@ namespace Task2
         {
             _radius = radius;
         }
-        public Circle(int x, int y, UInt32 radius, Color color) : this(x, y, radius, color, true) { }
-        public Circle(int x, int y, UInt32 radius) : this(x, y, radius, Color.red, true) { }
-        public Circle(int x, int y) : this(x, y, 1, Color.red, true) { }
-        public Circle() : this(0, 0, 1, Color.red, true) { }
+        public Circle(int x, int y, UInt32 radius, Color color) : this(x, y, radius, color, false) { }
+        public Circle(int x, int y, UInt32 radius) : this(x, y, radius, Color.red, false) { }
+        public Circle(int x, int y) : this(x, y, 1, Color.red, false) { }
+        public Circle() : this(0, 0, 1, Color.red, false) { }
         #endregion
 
         private UInt32 _radius;
@@ -29,9 +29,9 @@ namespace Task2
         public override string ToString()
         {
             return $"Координаты центра круга (X,Y): ({_x},{_y})\n" +
-                   $"Радиус круга: {_radius}" +
+                   $"Радиус круга: {_radius}\n" +
                    $"Цвет: {_color}\n" +
-                   $"Видимость: {IsVisible()}";
+                   $"Видимость: {IsVisible()}\n";
         }
     }
 }
