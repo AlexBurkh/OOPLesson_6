@@ -22,7 +22,7 @@ namespace Task2
 
         private UInt32 _radius;
 
-        public override Int32 CalcSquare()
+        public override Double CalcSquare()
         {
             return Math.PI * _radius * _radius;
         }

@@ -21,10 +21,10 @@ namespace Task2
         }
         #endregion
 
-        private Int32 _height;
-        private Int32 _width;
+        private UInt32 _height;
+        private UInt32 _width;
 
-        public override Int32 CalcSquare()
+        public override Double CalcSquare()
         {
             return _height * _width;
         }

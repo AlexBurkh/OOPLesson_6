@@ -34,7 +34,7 @@ namespace Task2
                    $"Цвет: {_color}\n" +
                    $"Видимость: {IsVisible()}";
         }
-        public virtual Int32 CalcSquare()
+        public virtual Double CalcSquare()
         {
             return 0;
         }
